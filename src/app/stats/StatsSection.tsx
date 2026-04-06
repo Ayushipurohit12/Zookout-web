@@ -38,11 +38,7 @@ export default function StatsSection() {
         {stats.map((s, i) => (
           <div
             key={s.label}
-            className={`flex flex-col items-center justify-center py-4 md:py-7 ${
-              i < stats.length - 1 && (i + 1) % (window.innerWidth >= 1024 ? 4 : window.innerWidth >= 768 ? 2 : 1) !== 0
-                ? "border-r border-[#e2ddd5] md:border-r lg:border-r"
-                : ""
-            } ${i < 2 ? "border-b border-[#e2ddd5] md:border-b-0" : ""}`}
+            className={`flex flex-col items-center justify-center py-4 md:py-7 border-b border-[#e2ddd5] md:border-b-0 ${i % 2 === 0 ? 'md:border-r border-[#e2ddd5]' : ''} ${i < 3 ? 'lg:border-r border-[#e2ddd5]' : ''}`}
           >
             <span
               className="font-['GT_Walsheim_Trial',sans-serif] font-normal text-3xl md:text-4xl lg:text-[56px] leading-tight md:leading-[60px] tracking-[-1px] text-[#0f0f0e] mb-1"
