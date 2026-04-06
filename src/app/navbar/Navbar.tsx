@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[rgba(0,0,0,0.88)] border-b border-[rgba(0,0,0,0)] flex items-center justify-between px-11 py-4 backdrop-blur-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#000000E0] border-b border-[rgba(0,0,0,0)] flex items-center justify-between px-11 py-4 backdrop-blur-sm">
       {/* Logo */}
       <div className="flex items-center">
-        <span className="text-[#ff6b00] font-bold text-2xl tracking-tight font-sans">ZOOKOUT</span>
+        <Image src="/Assets/logo.svg" alt="ZookOut Logo" width={120} height={40} />
       </div>
 
       {/* Nav Links */}
