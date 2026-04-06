@@ -1,10 +1,4 @@
 "use client";
-
-// Figma node: 2:84 — Container section
-// bg: #f5f2ec | width: 1200px | height: 252.5px
-// Label: "Merchants already on ZookOut" (Inter Medium, #7a7a75, 11px)
-// Icons row: 7 categories, each 138px wide, height ~141-156px
-
 const merchants = [
   {
     icon: "/Assets/merchants/salon.svg",
