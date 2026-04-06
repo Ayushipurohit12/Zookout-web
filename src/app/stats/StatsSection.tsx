@@ -34,22 +34,22 @@ const stats = [
 export default function StatsSection() {
   return (
     <section className="bg-[#FFFFFF]">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-4">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {stats.map((s, i) => (
           <div
             key={s.label}
-            className={`flex flex-col items-center justify-center py-7 ${
-              i < stats.length - 1
-                ? "border-r border-[#e2ddd5]"
+            className={`flex flex-col items-center justify-center py-4 md:py-7 ${
+              i < stats.length - 1 && (i + 1) % (window.innerWidth >= 1024 ? 4 : window.innerWidth >= 768 ? 2 : 1) !== 0
+                ? "border-r border-[#e2ddd5] md:border-r lg:border-r"
                 : ""
-            }`}
+            } ${i < 2 ? "border-b border-[#e2ddd5] md:border-b-0" : ""}`}
           >
             <span
-              className="font-['GT_Walsheim_Trial',sans-serif] font-normal text-[56px] leading-[60px] tracking-[-1px] text-[#0f0f0e] mb-1"
+              className="font-['GT_Walsheim_Trial',sans-serif] font-normal text-3xl md:text-4xl lg:text-[56px] leading-tight md:leading-[60px] tracking-[-1px] text-[#0f0f0e] mb-1"
             >
               {s.value}
             </span>
-            <span className="font-['Inter',sans-serif] font-medium text-[13px] leading-[20px] text-[#7a7a75] text-center">
+            <span className="font-['Inter',sans-serif] font-medium text-xs md:text-[13px] leading-[20px] text-[#7a7a75] text-center px-2">
               {s.label}
             </span>
           </div>
